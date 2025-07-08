@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "nunito";
+    src: url("./fonts/Nunito-VariableFont_wght.ttf");
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #2e394d;
+    --cl: #f7f4f4;
+
+    font-family: "nunito", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0b121f !important;
+}
+
+body > div {
+    background-color: var(--bg);
+    padding: 20px 30px;
+    display: flex;
+    border-radius: 10px;
+    width: min(900px, 95%);
+    min-height: 500px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#weather-form {
+    overflow: hidden;
+    width: min(300px, 100%);
+    color: var(--cl);
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#weather-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#weather-form label {
+    font-weight: 750;
+    font-size: 1.2rem;
+}
+
+#weather-form > button {
+    justify-self: center;
+    align-self: center;
+}
+
+#weather-form select,
+button {
+    border: 1px solid transparent;
+    padding: 8px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    background-color: #4e5565;
+    color: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    border-radius: 20px;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #1a2333;
+}
+
+#info-container {
+    align-self: center;
+    width: min(520px);
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 40px 150px 30px 10px;
+    gap: 20px;
+}
+
+#info-container > h1 {
+    color: var(--cl);
+    justify-self: center;
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+#info-container > img {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    place-self: center;
+    width: 300px;
+}
+
+#info-container > div {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #202a3d;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    place-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#info-container > div > p {
+    color: var(--cl);
+    font-size: 1.6rem;
+}
+
+#info-container > h2 {
+    grid-column: 2;
+    grid-row: 3;
+    color: var(--cl);
+    place-self: center;
+    font-size: 1.2rem;
+}
+
+#info-container > p {
+    color: var(--cl);
+    justify-self: center;
+    grid-column: 1 / -1;
+    text-align: center;
+    place-self: center;
+    font-size: 1rem;
+}
